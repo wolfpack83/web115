@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <img src="mealPlan.png" style="width:100%;">
+    <title> Build Your Meal Plan </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        legend {
+            text-align: left;
+            color: #333;
+            font-weight: bold;
+            font-size: large;
+            color: blue;
+        }
+
+        /*  #row {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+        }
+
+        #column {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+*/
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        fieldset {
+            text-align: center;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .meals {
+            width: 90%;
+            padding: 2px;
+            font-size: 12px;
+            border-radius: 1px;
+            border: 1px solid #ccc;
+
+        }
+
+        .userInfo {
+            width: 50%;
+            padding: 8px;
+            font-size: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+        }
+
+        /*   button[type="submit"] {
+
+            width: 25%;
+            padding: 8px;
+            font-size: 14px;
+            color: #bce5ee;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 auto;
+        }
+        */
+    </style>
+    </div>
+</head>
+
+<body>
+    <br>
+    <br>
+    <form id="myForm">
+        <fieldset id="column">
+            <legend>User Information</legend>
+            <label for="fName">First name:</label>
+            <input type="text" class="userInfo" id="fName" /><br><br>
+            <label for="lName">Last name:</label>
+            <input type="text" class="userInfo" id="lName" /><br><br>
+            <label for="email">Email:</label>
+            <input type="email" class="userInfo" id="email" required /><br><br>
+
+        </fieldset>
+        <fieldset id="row">
+            <legend>Detailed Plan</legend>
+            <table style="font-size: 12px;">
+                <thead>
+                    <th></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </thead>
+                <tbody>
+                    <tr id="breakfast">
+                        <td>breakfast</td>
+                        <td><input type="text" class="meals" id="Monday" /></td>
+                        <td><input type="text" class="meals" id="Tuesday" /></td>
+                        <td><input type="text" class="meals" id="Wednesday" /></td>
+                        <td><input type="text" class="meals" id="Thursday" /></td>
+                        <td><input type="text" class="meals" id="Friday" /></td>
+                        <td><input type="text" class="meals" id="Saturday" /></td>
+                        <td><input type="text" class="meals" id="Sunday" /></td>
+                    </tr>
+                    <tr id="snack1">
+                        <td>1st snack</td>
+                        <td><input type="text" class="meals" id="Monday" /></td>
+                        <td><input type="text" class="meals" id="Tuesday" /></td>
+                        <td><input type="text" class="meals" id="Wednesday" /></td>
+                        <td><input type="text" class="meals" id="Thursday" /></td>
+                        <td><input type="text" class="meals" id="Friday" /></td>
+                        <td><input type="text" class="meals" id="Saturday" /></td>
+                        <td><input type="text" class="meals" id="Sunday" /></td>
+                    </tr>
+                    <tr id="lunch">
+                        <td>lunch</td>
+                        <td><input type="text" class="meals" id="Monday" /></td>
+                        <td><input type="text" class="meals" id="Tuesday" /></td>
+                        <td><input type="text" class="meals" id="Wednesday" /></td>
+                        <td><input type="text" class="meals" id="Thursday" /></td>
+                        <td><input type="text" class="meals" id="Friday" /></td>
+                        <td><input type="text" class="meals" id="Saturday" /></td>
+                        <td><input type="text" class="meals" id="Sunday" /></td>
+                    </tr>
+                    <tr id="snack2">
+                        <td>2nd snack</td>
+                        <td><input type="text" class="meals" id="Monday" /></td>
+                        <td><input type="text" class="meals" id="Tuesday" /></td>
+                        <td><input type="text" class="meals" id="Wednesday" /></td>
+                        <td><input type="text" class="meals" id="Thursday" /></td>
+                        <td><input type="text" class="meals" id="Friday" /></td>
+                        <td><input type="text" class="meals" id="Saturday" /></td>
+                        <td><input type="text" class="meals" id="Sunday" /></td>
+                    </tr>
+                    <tr id="dinner">
+                        <td>dinner</td>
+                        <td><input type="text" class="meals" id="Monday" /></td>
+                        <td><input type="text" class="meals" id="Tuesday" /></td>
+                        <td><input type="text" class="meals" id="Wednesday" /></td>
+                        <td><input type="text" class="meals" id="Thursday" /></td>
+                        <td><input type="text" class="meals" id="Friday" /></td>
+                        <td><input type="text" class="meals" id="Saturday" /></td>
+                        <td><input type="text" class="meals" id="Sunday" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </fieldset>
+        <br>
+        <input type="button" style="width: 25%; align-self: center;" id="myButton" value="Submit Plan" />
+
+
+    </form>
+</body>
+</body>
+
+</html>
