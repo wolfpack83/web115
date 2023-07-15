@@ -1,4 +1,12 @@
-
+//email check via regex
+document.getElementById('email').addEventListener('blur', function() {
+    let emailTxt = document.getElementById('email')
+    let regex =  /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/
+    if (!regex.test(emailTxt.value)) {
+        alert('Please provide a valid email address');
+        emailTxt.focus;
+        emailTxt.value= 'Enter valid email'
+}})
 // create a table
 function createTable() {
     const myTable = document.getElementById('myTable')
@@ -57,13 +65,16 @@ const downloadButton = document.getElementById('download_link')
 downloadButton.addEventListener('click', downld)
 
 function downld() {
+    
     var cells = document.getElementsByTagName('td');
     var repText = "Report"
     for (i = 0; i < cells.length; i++) {
-        repText += ('<br>')
-        repText += (cells[i].value);
-    }
-    var text = new Blob([repText], { type: 'data:attachment/text' })
+        //repText += '\n';
+        if (cells[i].textContent != "undefined"){
+            repText += (cells[i].value);
+    }}
+    var txt = document.documentElement.outerHTML
+    var text = new Blob([repText], { type: 'data:plain/text' })
     var hiddenElement = document.createElement('a');
     hiddenElement.href = URL.createObjectURL(text);
     hiddenElement.download = 'PlanDownload.txt';
